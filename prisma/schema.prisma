@@ -36,6 +36,7 @@ model JournalEntry {
   @@unique([userId, id])
 }
 
+// generate whenever journal content is updated/created
 model Analysis {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())

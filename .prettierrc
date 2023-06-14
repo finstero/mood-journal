@@ -1,4 +1,6 @@
 {
+  "maxLength": 80,
+  "printWidth": 80,
   "semi": false,
   "singleQuote": true
 }
