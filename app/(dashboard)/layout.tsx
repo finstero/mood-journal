@@ -1,6 +1,11 @@
 import { UserButton } from "@clerk/nextjs"
+import { ReactNode } from "react";
 
-const DashboardLayout = ({ children }) => {
+interface DashboardLayoutProps {
+  children: ReactNode;
+}
+
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return  <div className="h-screen w-screen relative">
   <aside className="absolute w-[200px] top-0 left-0 h-full border-r border-black/10">
     Mood

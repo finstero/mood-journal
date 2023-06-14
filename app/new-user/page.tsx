@@ -9,11 +9,11 @@ const createNewUser = async () => {
 
   const match = await prisma.user.findUnique({
     where: {
-      clerkId: user.id as string,
+      clerkId: user?.id as string,
     },
   })
 
-  if (!match) {
+  if (!match && user) {
     const newUser = await prisma.user.create({
       data: {
         clerkId: user.id,
